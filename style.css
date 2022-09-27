@@ -57,30 +57,37 @@ footer{
 
 /*Imagens dos Botões*/
 
-.btn1{
+.a{
     background-image: url(./images/crash.png);
 }
 
-.btn2{
+.s{
     background-image: url(./images/kick.png);
 }
 
-.btn3{
+.d{
     background-image: url(./images/snare.png);
 }
 
-.btn4{
+.h{
     background-image: url(./images/tom1.png);
 }
 
-.btn5{
+.j{
     background-image: url(./images/tom2.png);
 }
 
-.btn6{
+.k{
     background-image: url(./images/tom3.png);
 }
 
-.btn7{
+.l{
     background-image: url(./images/tom4.png);
+}
+
+.active-button{
+    opacity: 0.5;
+    -webkit-box-shadow: 6px 4px 9px 0px rgba(0,0,0,0.38);
+    -moz-box-shadow: 6px 4px 9px 0px rgba(0,0,0,0.38);
+    box-shadow: 6px 4px 9px 0px rgba(0,0,0,0.38);
 }

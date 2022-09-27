@@ -6,7 +6,8 @@ for (let i = 0; i < numBtn.length; i++){
    
     document.querySelectorAll('.btn')[i].addEventListener('click', function(){
         let clickButton = this.innerText
-        drumPlay(clickButton)
+        drumPlay(clickButton);
+        buttonAnimation(clickButton);
     })
 }
 
@@ -15,6 +16,7 @@ for (let i = 0; i < numBtn.length; i++){
 document.addEventListener("keydown", function(event){
     let tecla = event.key.toUpperCase();
     drumPlay(tecla);
+    buttonAnimation(tecla);
 })
 
 // Função Principal para Reproduzir os Sons
@@ -23,7 +25,7 @@ function drumPlay(buttonInnerHTML){
 
     switch (buttonInnerHTML){
         case "A":
-            let crash = new Audio('/sounds/crash.mp3')
+            let crash = new Audio('/sounds/crash.wav')
             crash.play();
         break;
         case "S":
@@ -54,6 +56,17 @@ function drumPlay(buttonInnerHTML){
 
 }
 
+function buttonAnimation(keyPress){
+    
+    let selectKeyPress = document.querySelector("." + keyPress.toLowerCase());
+
+    selectKeyPress.classList.add("active-button");
+
+    setTimeout(function(){
+        selectKeyPress.classList.remove("active-button");
+    }, 82);
+    
+}
 
 
 
